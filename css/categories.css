@@ -1,0 +1,262 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    /* height: 800px; */
+}
+
+.categories {
+    padding: 20px;
+}
+
+.categories i {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.categories .container {
+    position: relative;
+    /* top: 20%;
+    /* left: 50%;
+	transform: translate(-50%,-50%); */
+    width: 1250px;
+    /* height: 50vh; */
+    display: flex;
+    padding-top: 50px;
+}
+
+.categories .container .box {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background: #ccc;
+    transition: 0.5s;
+    /* margin: 0 6px; */
+}
+
+.categories .container .box:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+.categories .container .box .thumb {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.categories .container .box:nth-child(odd) .thumb {
+    bottom: 0;
+    left: 0;
+}
+
+.categories .container .box .thumb img {
+    height: 100%;
+    /* right: 50%; */
+}
+
+.categories .container .box .details {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #262626;
+}
+
+.categories .container .box:nth-child(even) .details {
+    bottom: 0;
+    left: 0;
+}
+
+.categories .container .box:nth-child(1) .details {
+    background: #8553cb;
+}
+
+.categories .container .box:nth-child(2) .details {
+    background: #fe8f01;
+}
+
+.categories .container .box:nth-child(3) .details {
+    background: #79d400;
+}
+
+.categories .container .box:nth-child(4) .details {
+    background: #ff3b34;
+}
+
+.categories .container .box:nth-child(5) .details {
+    background: #2E64FE;
+}
+
+.categories .container .box .details .content {
+    position: absolute;
+    top: calc(15% + 16px);
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.categories .container .box:hover .details .content {
+    top: calc(15%)
+}
+
+.categories .container .box .details .content .fas {
+    font-size: 80px;
+    color: #fff;
+}
+
+.categories .container .box .details .content h3 {
+    margin: 0;
+    padding: 0;
+    padding: 10px, 0;
+    color: #fff;
+}
+
+.categories .container .box .details .content a {
+    display: inline-block;
+    padding: 5px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    border-radius: 20px;
+    transform: scale(0);
+}
+
+.categories .container .box:hover .details .content a {
+    transform: scale(1);
+}
+
+.categories .container .box .details .content a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.categories .leftBox {
+    width: 50%;
+    height: 100%;
+    float: none;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.categories .leftBox .content {
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    padding: 40px;
+    transition: .5s;
+}
+
+.categories .leftBox .content:hover {
+    background: rgb(25, 165, 228);
+}
+
+.categories .leftBox .content h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.categories .leftBox .content p {
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+@media screen and (max-width:1240px) {
+    .categories .container {
+        position: relative;
+        width: 80%;
+        height: auto;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        top: calc(50% + 30px);
+        /* margin-bottom: 50vh; */
+    }
+    .categories .container .box {
+        height: 250px;
+    }
+    .categories .container .box .thumb {
+        display: none;
+    }
+    section.categories .leftBox {
+        width: 80%;
+        height: auto;
+        float: none;
+        padding: 20px;
+        text-align: center;
+        justify-content: center;
+    }
+    section.categories .leftBox .content {
+        padding: 20px;
+    }
+    section.categories .leftBox h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:1030px) {
+    .categories .container {
+        display: initial;
+        margin-top: 130px;
+        position: relative;
+    }
+    .categories .container .box {
+        width: 50%;
+        height: 250px;
+        float: left;
+        transition: 0.5s;
+    }
+    section.categories .leftBox {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+    }
+    section.categories .leftBox .content {
+        padding: 20px;
+    }
+    section.categories .leftBox h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .categories .container {
+        margin-top: 3vh;
+        position: relative;
+        left: 0;
+        transform: translate(0);
+    }
+    .categories .container .box {
+        width: 100%;
+        height: 250px;
+        float: none;
+    }
+    section.categories .leftBox {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 20px;
+    }
+    section.categories .leftBox .content {
+        padding: 20px;
+    }
+    section.categories .leftBox h1 {
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,19 @@
+#fullpage {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#fullpage section {
+    height: 100vh;
+}
+
+#fullpage section h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#fullpage section:nth-child(1) {}
+
+#fullpage section:nth-child(2) {}
+
+#fullpage section:nth-child(3) {}
